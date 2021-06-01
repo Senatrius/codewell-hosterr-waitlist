@@ -316,5 +316,43 @@ footer {
 
   .main__image {
     order: 1;
+    max-width: 40rem;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .header__nav ul {
+    width: 60%;
+  }
+
+  .main__image {
+    width: 75%;
+    padding: 6rem 0;
+  }
+
+  .join {
+    width: 100%;
+  }
+
+  .input-block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cta-btn {
+    margin-left: unset;
+    margin-top: 1.5rem;
+    width: 100%;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 2rem;
+  }
+
+  .footer__nav {
+    margin-bottom: 6rem;
   }
 }

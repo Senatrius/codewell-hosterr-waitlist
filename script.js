@@ -7,9 +7,11 @@ hamburgerBtn.addEventListener('click', () => {
     hamburgerBtnIcon.src = "Assets/Bars.svg";
     menuSection.classList.remove('open');
     hamburgerBtn.style.position = "relative";
+    hamburgerBtn.style.right = "unset";
   } else {
     menuSection.classList.add('open');
     hamburgerBtnIcon.src = "Assets/Times.svg";
     hamburgerBtn.style.position = "fixed";
+    hamburgerBtn.style.right = "4rem";
   }
 })
