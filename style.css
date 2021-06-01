@@ -92,12 +92,29 @@ header {
 
 .header__nav ul {
   display: flex;
+  position: relative;
 }
 
 .header__nav-item {
   margin-left: 2.5rem;
   list-style: none;
   text-transform: capitalize;
+}
+
+.header__menu-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  background: transparent;
+  border: 0;
+  outline: transparent;
+  cursor: pointer;
+}
+
+.header__menu-btn img {
+  width: 100%;
 }
 
 main {
@@ -224,4 +241,52 @@ footer {
 .help-text > p:last-child {
   color: #000;
   font-weight: 700;
+}
+
+@media screen and (max-width: 980px) {
+  .header__nav ul {
+    display: block;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 40%;
+    transform: translateX(100%);
+    z-index: 2;
+    transition: transform .2s ease-in-out;
+    background: white;
+    padding: 10rem 1rem 0rem 1rem;
+    border-left: 5px solid var(--clr-primary);
+  }
+
+  .header__nav-item {
+    margin-left: unset;
+    margin-bottom: .5rem;
+  }
+
+  .header__nav-item a {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    border-radius: .5rem;
+    transition: .02s ease-in-out;
+  }
+
+  .header__nav-item a:hover, .header__nav-item a:focus {
+    background: var(--clr-primary);
+    color: #fff;
+  }
+
+  .header__nav ul.open {
+    transform: translateX(0);
+  }
+
+  .header__menu-btn {
+    display: flex;
+    z-index: 3;
+  }
+
+  .header__cta {
+    display: none;
+  }
 }
